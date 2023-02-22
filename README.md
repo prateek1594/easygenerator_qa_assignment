@@ -1,0 +1,1 @@
+# easygenerator_qa_assignment
