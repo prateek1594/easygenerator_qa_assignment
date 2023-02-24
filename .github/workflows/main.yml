@@ -1,0 +1,46 @@
+name: Automated tests for Easygenerator
+
+on: push
+
+jobs:
+  cyress-run:
+    runs-on: ubuntu-latest
+    steps:
+      # Checkout the latest code 
+      - name: Checkout 
+        uses: actions/checkout@v3
+
+      - name: Install Node.js version
+        uses: actions/setup-node@v3
+        with:
+          node-version: 16
+
+      # Install Cypress and Dependencies and print only required information
+      - name: Install dependencies and verify Cypress
+        run: |
+          npm ci
+          npx cypress verify 
+          npx cypress info 
+
+      # Run tests on chrome browser
+      - name: Cypress run
+        uses: cypress-io/github-action@v5
+        timeout-minutes: 30
+        with:
+          command: npx cypress run test --browser chrome
+          
+      # Get the screenshots on failue and upload as an artifact
+      - name: Get screenshots on failure
+        uses: actions/upload-artifact@v2
+        if: failure()
+        with:
+          name: cypress-screenshots
+          path: ./cypress/screenshots
+
+      # Get the video of the test and can be seen as an artifact
+      - name: Get videos on failure
+        uses: actions/upload-artifact@v2
+        if: always()
+        with:
+          name: cypress-videos
+          path: ./cypress/videos

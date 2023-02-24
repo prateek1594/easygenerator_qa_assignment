@@ -1,0 +1,28 @@
+{
+  "name": "qa_cypress_assessment",
+  "version": "1.0.0",
+  "description": "Automation framework developed using Cypress",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/prateek1594/easygenerator_qa_assignment.git"
+  },
+  "author": "Prateek Mishra",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/prateek1594/easygenerator_qa_assignment/issues"
+  },
+  "homepage": "https://github.com/prateek1594/easygenerator_qa_assignment#readme",
+  "devDependencies": {
+    "cypress": "^12.6.0",
+    "cypress-mochawesome-reporter": "^3.3.0",
+    "eslint": "^8.34.0"
+  },
+  "dependencies": {
+    "cypress-iframe": "^1.0.1",
+    "prettier": "^2.8.4"
+  }
+}
