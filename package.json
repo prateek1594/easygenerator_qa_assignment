@@ -4,7 +4,8 @@
   "description": "Automation framework developed using Cypress",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "cy:runHeadless" : "npx cypress run test --browser chrome",
+    "cy:runHeaded" : "npx cypress run test --browser chrome --headed"
   },
   "repository": {
     "type": "git",
