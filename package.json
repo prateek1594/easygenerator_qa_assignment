@@ -29,6 +29,6 @@
     "prettier": "^2.8.4"
   },
   "dependencies": {
-    "cypress-iframe": "^1.0.1"
+    "cypress-iframe": "^1.0.1" 
   }
 }

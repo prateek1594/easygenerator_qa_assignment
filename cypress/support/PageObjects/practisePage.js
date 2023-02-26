@@ -93,6 +93,7 @@ class practisePage {
         return cy.get('.mouse-hover-content')
     }
 
+    //cypress iframes is used to handle iframe cases
     loadFrames() {
         return cy.frameLoaded('#courses-iframe')
     }
