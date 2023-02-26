@@ -4,8 +4,10 @@
   "description": "Automation framework developed using Cypress",
   "main": "index.js",
   "scripts": {
-    "cy:runHeadless" : "npx cypress run test --browser chrome",
-    "cy:runHeaded" : "npx cypress run test --browser chrome --headed"
+    "format": "prettier --write \"cypress/**/*.{js,jsx}\"",
+    "lint": "eslint \"cypress/**/*.{js,jsx}\" --quiet",
+    "cy:runHeadless": "npx cypress run test --browser chrome",
+    "cy:runHeaded": "npx cypress run test --browser chrome --headed"
   },
   "repository": {
     "type": "git",
@@ -20,10 +22,13 @@
   "devDependencies": {
     "cypress": "^12.6.0",
     "cypress-mochawesome-reporter": "^3.3.0",
-    "eslint": "^8.34.0"
+    "eslint": "^8.35.0",
+    "eslint-config-prettier": "^8.6.0",
+    "eslint-plugin-chai-friendly": "^0.7.2",
+    "eslint-plugin-cypress": "^2.12.1",
+    "prettier": "^2.8.4"
   },
   "dependencies": {
-    "cypress-iframe": "^1.0.1",
-    "prettier": "^2.8.4"
+    "cypress-iframe": "^1.0.1"
   }
 }

@@ -19,10 +19,7 @@ describe('UI tests for Automation Practise Page', function () {
         //Using a Chai assertion which makes sure that the required text is present
         practicePageVar
             .getBlinkingText()
-            .should(
-                'have.text',
-                Cypress.env('BLINKING_TEXT')
-            )
+            .should('have.text', Cypress.env('BLINKING_TEXT'))
 
         //Clicking the Home button, making sure that the link opens in the same browser and then navigating back
         practicePageVar.getHomeButton().contains('Home').click()
